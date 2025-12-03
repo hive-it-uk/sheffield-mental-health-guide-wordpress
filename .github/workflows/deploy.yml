@@ -1,0 +1,46 @@
+name: Deploy to Kinsta
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main # Trigger the workflow only when changes are pushed to the main branch
+
+jobs:
+  deploy:
+    environment: Production
+    runs-on: ubuntu-latest
+    env:
+      SSH_PORT: ${{ vars.SSH_PORT }} #1547
+      SSH_HOST: ${{ vars.SSH_HOST }} #0.0.0.0
+      SSH_KEY: ${{ secrets.SSH_KEY }}
+      SSH_USERNAME: ${{ secrets.SSH_USERNAME }} #username
+      KNOWN_HOSTS: ${{ vars.SSH_KNOWN_HOSTS }} #0.0.0.0:1547
+      DOMAIN: ${{ vars.DOMAIN }} #url.com
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.3'
+
+    - name: Install SSH key
+      uses: shimataro/ssh-key-action@v2
+      with:
+        key: ${{ env.SSH_KEY }}
+        name: id_rsa # optional
+        known_hosts: ${{ env.KNOWN_HOSTS }}
+        if_key_exists: fail # replace / ignore / fail; optional (defaults to fail)
+
+    - name: Update Composer Bedrock
+      run: composer install --prefer-dist --no-progress
+
+    # Environment config
+    - name: Push files to the remote
+      run: rsync --progress -avz --chmod=Du=rwx,Dg=rx,Do=rx,Fu=rw,Fg=r,Fo=r --exclude=".git/" --exclude=".ddev/" --exclude ".github/" --exclude=".gitignore" 
+              -e 'ssh -o StrictHostKeyChecking=no -p ${{ env.SSH_PORT }}' ./ ${{ env.SSH_USERNAME }}@${{ env.SSH_HOST }}:public
+
+    - name: Clear cache on kinsta
+      run: ssh ${{ env.SSH_USERNAME }}@${{ env.SSH_HOST }} -p ${{ env.SSH_PORT }} 'curl https://${{ env.DOMAIN }}/kinsta-clear-cache-all'

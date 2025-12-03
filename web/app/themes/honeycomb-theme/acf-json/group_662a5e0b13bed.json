@@ -1,0 +1,132 @@
+{
+  "key": "group_662a5e0b13bed",
+  "title": "Resource",
+  "fields": [
+    {
+      "key": "field_662fb360155f7",
+      "label": "Resource Type",
+      "name": "resource_type",
+      "aria-label": "",
+      "type": "radio",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "relevanssi_exclude": 0,
+      "choices": {
+        "url": "Url",
+        "file": "File"
+      },
+      "default_value": "url",
+      "return_format": "value",
+      "allow_null": 0,
+      "other_choice": 0,
+      "layout": "vertical",
+      "save_other_choice": 0
+    },
+    {
+      "key": "field_662a5e1469db7",
+      "label": "Resource url",
+      "name": "resource_url",
+      "aria-label": "",
+      "type": "url",
+      "instructions": "",
+      "required": 1,
+      "conditional_logic": [
+        [
+          {
+            "field": "field_662fb360155f7",
+            "operator": "==",
+            "value": "url"
+          }
+        ]
+      ],
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "relevanssi_exclude": 0,
+      "default_value": "",
+      "placeholder": ""
+    },
+    {
+      "key": "field_662f817903c16",
+      "label": "Resource file",
+      "name": "resource_file",
+      "aria-label": "",
+      "type": "file",
+      "instructions": "",
+      "required": 1,
+      "conditional_logic": [
+        [
+          {
+            "field": "field_662fb360155f7",
+            "operator": "==",
+            "value": "file"
+          }
+        ]
+      ],
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "relevanssi_exclude": 0,
+      "return_format": "array",
+      "library": "all",
+      "min_size": "",
+      "max_size": "",
+      "mime_types": ""
+    },
+    {
+      "key": "field_663d07ad03b72",
+      "label": "Open in new tab",
+      "name": "resource_new_tab",
+      "aria-label": "",
+      "type": "radio",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "relevanssi_exclude": 0,
+      "choices": {
+        "true": "Yes",
+        "false": "No"
+      },
+      "default_value": "true",
+      "return_format": "value",
+      "allow_null": 0,
+      "other_choice": 0,
+      "layout": "vertical",
+      "save_other_choice": 0
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "external_resource"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1715282881
+}
