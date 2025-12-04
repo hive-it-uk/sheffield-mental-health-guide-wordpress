@@ -1,4 +1,4 @@
-name: Deploy to Kinsta
+name: Deploy to Staging
 
 on:
   workflow_dispatch:
@@ -8,14 +8,13 @@ on:
 
 jobs:
   deploy:
-    environment: Production
+    environment: Staging
     runs-on: ubuntu-latest
     env:
       SSH_PORT: ${{ vars.SSH_PORT }} #1547
-      SSH_HOST: ${{ vars.SSH_HOST }} #0.0.0.0
+      SSH_HOST: ${{ vars.SSH_HOST }} 
       SSH_KEY: ${{ secrets.SSH_KEY }}
-      SSH_USERNAME: ${{ vars.SSH_USERNAME }} #username
-      KNOWN_HOSTS: ${{ vars.SSH_KNOWN_HOSTS }} #0.0.0.0:1547
+      SSH_USERNAME: ${{ vars.SSH_USERNAME }} 
       DOMAIN: ${{ vars.DOMAIN }} #url.com
 
     steps:
@@ -31,7 +30,7 @@ jobs:
       with:
         key: ${{ env.SSH_KEY }}
         name: id_rsa # optional
-        known_hosts: ${{ env.KNOWN_HOSTS }}
+        known_hosts: ${{ env.SSH_HOST }}
         if_key_exists: fail # replace / ignore / fail; optional (defaults to fail)
 
     - name: Update Composer Bedrock
