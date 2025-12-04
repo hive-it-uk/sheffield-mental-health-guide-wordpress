@@ -14,7 +14,7 @@ jobs:
       SSH_PORT: ${{ vars.SSH_PORT }} #1547
       SSH_HOST: ${{ vars.SSH_HOST }} #0.0.0.0
       SSH_KEY: ${{ secrets.SSH_KEY }}
-      SSH_USERNAME: ${{ secrets.SSH_USERNAME }} #username
+      SSH_USERNAME: ${{ vars.SSH_USERNAME }} #username
       KNOWN_HOSTS: ${{ vars.SSH_KNOWN_HOSTS }} #0.0.0.0:1547
       DOMAIN: ${{ vars.DOMAIN }} #url.com
 
