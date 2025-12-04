@@ -174,3 +174,13 @@ if (!defined('ABSPATH')) {
     define('ABSPATH', $webroot_dir . '/wp/');
 }
 
+/**
+ * Kinsta CDN fix for Bedrock
+ */
+define('KINSTA_CDN_USERDIRS', 'app');
+
+/**
+ * Fix Kinsta MU Plugins URL path with Bedrock
+ */
+$mu_plugins_url = Config::get('WP_CONTENT_URL') . '/mu-plugins';
+define('KINSTAMU_CUSTOM_MUPLUGIN_URL', "{$mu_plugins_url}/kinsta-mu-plugins");
