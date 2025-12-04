@@ -87,10 +87,10 @@ if (env('DB_SSL')) {
     Config::define('MYSQL_CLIENT_FLAGS', MYSQLI_CLIENT_SSL);
 }
 
-Config::define('DB_NAME', env('DB_NAME'));
-Config::define('DB_USER', env('DB_USER'));
-Config::define('DB_PASSWORD', env('DB_PASSWORD'));
-Config::define('DB_HOST', env('DB_HOST') ?: 'localhost');
+Config::define('DB_NAME', defined('SERVER_SECRET_DB_NAME') ? SERVER_SECRET_DB_NAME : env('DB_NAME'));
+Config::define('DB_USER', defined('SERVER_SECRET_DB_USER') ? SERVER_SECRET_DB_USER : env('DB_USER'));
+Config::define('DB_PASSWORD', defined('SERVER_SECRET_DB_PASSWORD') ? SERVER_SECRET_DB_PASSWORD : env('DB_PASSWORD'));
+Config::define('DB_HOST', defined('SERVER_SECRET_DB_HOST') ? SERVER_SECRET_DB_HOST : env('DB_HOST'));
 Config::define('DB_CHARSET', 'utf8mb4');
 Config::define('DB_COLLATE', '');
 $table_prefix = env('DB_PREFIX') ?: 'wp_';
