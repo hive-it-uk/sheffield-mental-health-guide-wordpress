@@ -1,0 +1,27 @@
+/* Accordion blocks */
+.wp-admin .c-accordion__item {
+  border: 2px dashed #ebecf0;
+  padding: 0.5rem;
+}
+
+.wp-admin .c-accordion__item.is-selected {
+  border-color: #467cb7;
+}
+
+.wp-admin .c-accordion__title {
+  background: #ebecf0;
+  display: block;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 1rem;
+}
+
+.wp-admin .c-accordion__title::after {
+  right: 1rem;
+}
+
+.form-field.term-parent-wrap,
+.editor-post-taxonomies__hierarchical-terms-add {
+  /* hides the parent dropdown */
+  display: none;
+}

@@ -1,0 +1,572 @@
+{
+    "key": "group_60746404aa92b",
+    "title": "Activity Details",
+    "fields": [
+        {
+            "key": "field_607466aba20d8",
+            "label": "Organiser",
+            "name": "activity_organiser",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "Activity organiser details",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_60746404c6748",
+                    "label": "Organiser Name",
+                    "name": "name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_60746404c67a1",
+                    "label": "Organiser Email",
+                    "name": "email",
+                    "aria-label": "",
+                    "type": "email",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_60746404c6804",
+                    "label": "Organiser Website",
+                    "name": "website",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_60746404c686d",
+                    "label": "Organiser Phone",
+                    "name": "phone",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6087ca779ca81",
+                    "label": "Organising Service",
+                    "name": "organising_service",
+                    "aria-label": "",
+                    "type": "post_object",
+                    "instructions": "Is this activity ran by a service already on the mental health guide?\r\nYou can link them here.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "service"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 1,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1,
+                    "bidirectional_target": []
+                }
+            ]
+        },
+        {
+            "key": "field_60746792a20d9",
+            "label": "Schedule",
+            "name": "activity_schedule",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "Schedule the activity",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "sub_fields": [
+                {
+                    "key": "field_60746404c615e",
+                    "label": "Activity Frequency",
+                    "name": "frequency",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "oneoff": "One-off",
+                        "weekly": "Weekly",
+                        "monthly": "Monthly"
+                    },
+                    "default_value": false,
+                    "allow_null": 1,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_60746404c62a9",
+                    "label": "Activity Start Date",
+                    "name": "start_date",
+                    "aria-label": "",
+                    "type": "date_picker",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "d\/m\/Y",
+                    "return_format": "d\/m\/Y",
+                    "first_day": 1
+                },
+                {
+                    "key": "field_60746404c63fa",
+                    "label": "Activity Start Time",
+                    "name": "start_time",
+                    "aria-label": "",
+                    "type": "time_picker",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "g:i a",
+                    "return_format": "g:i a"
+                },
+                {
+                    "key": "field_60746404c6374",
+                    "label": "Activity End Date",
+                    "name": "end_date",
+                    "aria-label": "",
+                    "type": "date_picker",
+                    "instructions": "The \"end date\" will be limited within 5 years from the \"start date\" above.",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_60746404c615e",
+                                "operator": "!=",
+                                "value": ""
+                            },
+                            {
+                                "field": "field_60746404c615e",
+                                "operator": "!=",
+                                "value": "oneoff"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "d\/m\/Y",
+                    "return_format": "d\/m\/Y",
+                    "first_day": 1
+                },
+                {
+                    "key": "field_60746404c648d",
+                    "label": "Activity End Time",
+                    "name": "end_time",
+                    "aria-label": "",
+                    "type": "time_picker",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "g:i a",
+                    "return_format": "g:i a"
+                },
+                {
+                    "key": "field_60746404c651e",
+                    "label": "Activity Schedule Every x Weeks",
+                    "name": "frequency_weekly_interval",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_60746404c615e",
+                                "operator": "==contains",
+                                "value": "2"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_60746404c615e",
+                                "operator": "==contains",
+                                "value": "weekly"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 1,
+                    "placeholder": "",
+                    "prepend": "every",
+                    "append": "week(s)",
+                    "min": 1,
+                    "max": 52,
+                    "step": ""
+                },
+                {
+                    "key": "field_60746404c65c4",
+                    "label": "Activity Schedule on the",
+                    "name": "frequency_monthly_week",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_60746404c615e",
+                                "operator": "==contains",
+                                "value": "3"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_60746404c615e",
+                                "operator": "==contains",
+                                "value": "monthly"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "1": "First",
+                        "2": "Second",
+                        "3": "Third",
+                        "4": "Fourth",
+                        "5": "Last"
+                    },
+                    "default_value": false,
+                    "allow_null": 1,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_60746404c6659",
+                    "label": "Activity Schedule Day",
+                    "name": "frequency_weekday",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_60746404c615e",
+                                "operator": "==contains",
+                                "value": "2"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_60746404c615e",
+                                "operator": "==contains",
+                                "value": "weekly"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_60746404c615e",
+                                "operator": "==contains",
+                                "value": "3"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_60746404c615e",
+                                "operator": "==contains",
+                                "value": "monthly"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Monday": "Monday",
+                        "Tuesday": "Tuesday",
+                        "Wednesday": "Wednesday",
+                        "Thursday": "Thursday",
+                        "Friday": "Friday",
+                        "Saturday": "Saturday",
+                        "Sunday": "Sunday"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                }
+            ]
+        },
+        {
+            "key": "field_607469f57c272",
+            "label": "Location",
+            "name": "activity_location",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "Select the activity location, if the Location is not listed you can create new Locations under Activities.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "activity_location"
+            ],
+            "taxonomy": "",
+            "allow_null": 1,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_60746404c66ca",
+            "label": "Booking requirement",
+            "name": "activity_booking_required",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": [
+                "Booking not required",
+                "Booking required"
+            ],
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_60746404c68d0",
+            "label": "Ticket Price",
+            "name": "activity_ticket_price",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Enter \"0\" for Free, or \"2.50\" for £2.50 for example",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "placeholder": "Enter \"0\" for Free, or \"2.50\" for £2.50 for example",
+            "prepend": "£",
+            "append": "",
+            "min": 0,
+            "max": "999.99",
+            "step": ""
+        },
+        {
+            "key": "field_6495a2a770fa9",
+            "label": "How to access",
+            "name": "how_to_access",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "in-person": "In-person",
+                "online": "Online",
+                "both": "Both"
+            },
+            "default_value": "in-person",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_64f043fa9b4c8",
+            "label": "Call To Action",
+            "name": "call_to_action",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "Optionally add a call to action, this is a link that will appear in the activity information section.\r\nAdd the link label text first, then add the URL",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_64f044269b4c9",
+                    "label": "Label",
+                    "name": "label",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "The text that appears in the button\/link. Avoid \"click here\".",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "relevanssi_exclude": 0,
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "example: \"View our website\" or \"Book now!\"",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_64f044479b4ca",
+                    "label": "URL",
+                    "name": "url",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "Where the CTA button links off to",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_64f044269b4c9",
+                                "operator": "!=empty"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "https:\/\/..."
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "activity"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 1,
+    "modified": 1693819662
+}
