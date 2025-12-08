@@ -93,7 +93,7 @@ Config::define('DB_PASSWORD', defined('SERVER_SECRET_DB_PASSWORD') ? SERVER_SECR
 Config::define('DB_HOST', defined('SERVER_SECRET_DB_HOST') ? SERVER_SECRET_DB_HOST : env('DB_HOST'));
 Config::define('DB_CHARSET', 'utf8mb4');
 Config::define('DB_COLLATE', '');
-$table_prefix = env('DB_PREFIX') ?: 'wp_';
+$table_prefix = env('DB_PREFIX') ?: 'smhg_';
 
 if (env('DATABASE_URL')) {
     $dsn = (object) parse_url(env('DATABASE_URL'));
