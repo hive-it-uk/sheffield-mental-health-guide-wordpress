@@ -147,7 +147,6 @@ ini_set('display_errors', '0');
  * Custom
  */
 Config::define('APP_FRONTEND_URL', env('APP_FRONTEND_URL'));
-Config::define('HTTP_AUTHORIZATION', '')
 Config::define('RECAPTCHA_SECRET_KEY', '6Lf0Hu4aAAAAADYtjTaNCsx6X5foTaHG63Zj_--Y');
 Config::define('AUTH_ENCRYPTION_KEY', 'rka2vtTL1GxnBOVp9ZKjjQWv6WE8fv0C');
 
