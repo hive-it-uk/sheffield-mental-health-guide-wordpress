@@ -39,7 +39,7 @@
         "type": "wordpress-muplugin",
         "version": "2.3.3",
         "dist": {
-          "url": "https://kinsta.com/kinsta-tools/kinsta-mu-plugins.zdde ip",
+          "url": "https://kinsta.com/kinsta-tools/kinsta-mu-plugins.zip",
           "type": "zip"
         }
       }
