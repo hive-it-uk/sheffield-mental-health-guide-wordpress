@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f66fe9f7e4d278c077173ca61ba69dbb",
+    "content-hash": "cbeeb48467a79cd4ac074abd02435c1f",
     "packages": [
         {
             "name": "composer/installers",
@@ -219,7 +219,7 @@
             "version": "2.3.3",
             "dist": {
                 "type": "zip",
-                "url": "https://kinsta.com/kinsta-tools/kinsta-mu-plugins.zdde ip"
+                "url": "https://kinsta.com/kinsta-tools/kinsta-mu-plugins.zip"
             },
             "type": "wordpress-muplugin"
         },
