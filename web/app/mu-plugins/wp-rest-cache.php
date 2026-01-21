@@ -10,7 +10,7 @@
  * Plugin Name:       WP REST Cache - Must-Use Plugin
  * Plugin URI:        https://www.acato.nl
  * Description:       This is the Must-Use version of the WP REST Cache plugin. Deactivating that plugin will remove this Must-Use plugin.
- * Version:           2021.3.0
+ * Version:           2025.1
  * Author:            Richard Korthuis - Acato
  * Author URI:        https://www.acato.nl
  * Text Domain:       wp-rest-cache
