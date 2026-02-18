@@ -62,7 +62,7 @@
     "wpackagist-plugin/accordion-blocks": "^1.5",
     "wpackagist-plugin/secure-custom-fields": "^6.7",
     "wpackagist-plugin/wp-mail-smtp": "^4.7",
-    "wpackagist-plugin/wp-rest-cache": "^2025.1",
+    "wpackagist-plugin/wp-rest-cache": "^2026.1",
     "wpackagist-plugin/wordpress-seo": "^27.0"
   },
   "require-dev": {

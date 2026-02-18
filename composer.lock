@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a4a7360f66d4e835968f12f199587f02",
+    "content-hash": "f260d6febe3c2ead733644055f9862bd",
     "packages": [
         {
             "name": "composer/installers",
@@ -1178,15 +1178,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-rest-cache",
-            "version": "2025.2.0",
+            "version": "2026.1.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-rest-cache/",
-                "reference": "tags/2025.2.0"
+                "reference": "tags/2026.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-rest-cache.2025.2.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-rest-cache.2026.1.1.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
