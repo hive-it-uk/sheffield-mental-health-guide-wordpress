@@ -46,24 +46,24 @@
     }
   ],
   "require": {
-    "php": ">=8.1",
+    "php": "^8.4",
     "composer/installers": "^2.2",
     "vlucas/phpdotenv": "^5.5",
     "oscarotero/env": "^2.1",
     "roots/bedrock-autoloader": "^1.0",
     "roots/bedrock-disallow-indexing": "^2.0",
-    "roots/wordpress": "6.9",
+    "roots/wordpress": "6.9.1",
     "roots/wp-config": "1.0.0",
     "wpackagist-theme/twentytwentyfive": "^1.0",
     "kinsta/kinsta-mu-plugins": "^2.3",
-    "wpackagist-plugin/imsanity": "^2.8",
+    "wpackagist-plugin/imsanity": "^2.9",
     "wpackagist-plugin/relevanssi": "^4.26",
     "wpackagist-plugin/post-type-switcher": "^4.0",
     "wpackagist-plugin/accordion-blocks": "^1.5",
     "wpackagist-plugin/secure-custom-fields": "^6.7",
     "wpackagist-plugin/wp-mail-smtp": "^4.7",
     "wpackagist-plugin/wp-rest-cache": "^2025.1",
-    "wpackagist-plugin/wordpress-seo": "^26.5"
+    "wpackagist-plugin/wordpress-seo": "^27.0"
   },
   "require-dev": {
     "laravel/pint": "^1.18"
