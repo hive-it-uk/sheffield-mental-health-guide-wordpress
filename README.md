@@ -51,10 +51,19 @@ Deployments to `production` can be manually triggered by running the workflow.
 
 Local environment variables can be set via `.env` 
 
-Kinsta has not means currently to set variables on the server, therefore they must be manually set.
+Kinsta has no means currently to set variables on the server, therefore they must be manually set.
 
 Currently this is done by accessing the site via ssh and manually creating and editing the `.env` file.
 
+You can do this by moving to the `public` directory and running either `cat .env` to see the current contents or `nano .env` to edit them.
+
+The following variables will need to be set (examples of live site configuration)
+```
+DB_PREFIX='smhg_'
+WP_HOME=https://cms.sheffieldmentalhealth.co.uk 
+APP_FRONTEND_URL='https://www.sheffieldmentalhealth.co.uk'
+RECAPTCHA_SECRET_KEY=MYSECRETKEY
+```
 
 ### Removing files
 
